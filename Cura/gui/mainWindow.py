@@ -552,7 +552,7 @@ class normalSettingsPanel(configBase.configPanelBase):
 		(left, right, self.printPanel) = self.CreateDynamicConfigTab(self.nb, 'Basic')
 
 		configBase.TitleRow(left, "Quality")
-		c = configBase.SettingRow(left, "Layer height (mm)", 'layer_height', '0.2', 'Layer height in millimeters.\n0.2 is a good value for quick prints.\n0.1 gives high quality prints.')
+		c = configBase.SettingRow(left, "Layer height (mm)", 'layer_height', '0.2', 'Layer height in micrometers.\n0.2 is a good value for quick prints.\n0.1 gives high quality prints.')
 		validators.validFloat(c, 0.0001)
 		validators.warningAbove(c, lambda : (float(profile.getProfileSetting('nozzle_size')) * 80.0 / 100.0), "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and are not recommended.")
 		c = configBase.SettingRow(left, "Wall thickness (mm)", 'wall_thickness', '0.8', 'Thickness of the walls.\nThis is used in combination with the nozzle size to define the number\nof perimeter lines and the thickness of those perimeter lines.')
