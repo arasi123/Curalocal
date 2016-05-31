@@ -16,7 +16,7 @@ class expertConfigWindow(wx.Frame):
 		left, right, main = self.panel.CreateConfigPanel(self)
 		
 		configBase.TitleRow(left, "Accuracy")
-		c = configBase.SettingRow(left, "Extra Wall thickness for bottom/top (mm)", 'extra_base_wall_thickness', '0.0', 'Additional wall thickness of the bottom and top layers.')
+		c = configBase.SettingRow(left, "Extra Wall thickness for bottom/top (micrometer)", 'extra_base_wall_thickness', '0.0', 'Additional wall thickness of the bottom and top layers.')
 		validators.validFloat(c, 0.0)
 		
 		configBase.TitleRow(left, "Cool")
